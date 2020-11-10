@@ -13,7 +13,7 @@ get_header();
 
 	<div class="content">
         <h1><?php the_title(); ?></h1>
-
+		
         <div class="card-room">
             <div class="row">
                 <div class="room-images col-6">
@@ -43,152 +43,123 @@ get_header();
 					<?php the_content(); ?>
                 </div>
             </div>
+			
+			<?php
+				if	(
+						have_rows('room_equipment_a_single_rooms_page') || 
+						have_rows('room_equipment_b_single_rooms_page') ||
+						have_rows('room_equipment_c_single_rooms_page') ||
+						have_rows('room_equipment_d_single_rooms_page')
+					){
+			?>
             <div class="room-services row row-cols-4">
+				<?php if( have_rows('room_equipment_a_single_rooms_page')){ ?>
                 <div class="list-column">
+					<?php while ( have_rows('room_equipment_a_single_rooms_page') ) { the_row(); ?>
                     <div>
                         <div class="list-img">
-                            <img src="/wp-content/themes/atlantik/images/video.svg"/>
+                            <img src="<?php echo get_sub_field('image_subblock_main_page'); ?>"/>
                         </div>
-                        <strong>Видео/аудио:</strong>
+                        <strong><?php echo get_sub_field('title_subblock_main_page'); ?></strong>
+						
+						<?php if( have_rows('items_subblock_main_page')){ ?>
                         <ul class="list-group">
-                            <li>Кабельное телевидение</li>
-                            <li>Телевизор</li>
+							<?php while ( have_rows('items_subblock_main_page') ) { the_row(); ?>
+                            <li><?php echo get_sub_field('name_items_subblock_main_page'); ?></li>
+                            <?php } ?>
                         </ul>
+						<?php } ?>
                     </div>
-                    <div>
-                        <div class="list-img">
-                            <img src="/wp-content/themes/atlantik/images/internet.svg"/>
-                        </div>
-                        <strong>Интернет/телефония:</strong>
-                        <ul class="list-group">
-                            <li>Wi-Fi</li>
-                            <li>Телефон</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <div class="list-img">
-                            <img src="/wp-content/themes/atlantik/images/electronica.svg"/>
-                        </div>
-                        <strong>Электроника:</strong>
-                        <ul class="list-group">
-                            <li>Система климат-контроля</li>
-                            <li>Фен</li>
-                            <li>Холодильник</li>
-                            <li>Электронные замки</li>
-                        </ul>
-                    </div>
+					<?php } ?>
                 </div>
+				<?php } ?>
+				
+                <?php if( have_rows('room_equipment_b_single_rooms_page')){ ?>
                 <div class="list-column">
+					<?php while ( have_rows('room_equipment_b_single_rooms_page') ) { the_row(); ?>
                     <div>
                         <div class="list-img">
-                            <img src="/wp-content/themes/atlantik/images/vannaya.svg"/>
+                            <img src="<?php echo get_sub_field('image_subblock_main_page'); ?>"/>
                         </div>
-                        <strong>Ванная комната:</strong>
+                        <strong><?php echo get_sub_field('title_subblock_main_page'); ?></strong>
+						
+						<?php if( have_rows('items_subblock_main_page')){ ?>
                         <ul class="list-group">
-                            <li>Биде</li>
-                            <li>Душевая кабина</li>
-                            <li>Пляжные полотенца</li>
-                            <li>Унитаз</li>
-                            <li>Ванная с джакузи</li>
-                            <li>Косметические средства</li>
-                            <li>Раковина</li>
-                            <li>Тапочки</li>
-                            <li>Халаты</li>
-                            <li>Гидромассажный душ</li>
+							<?php while ( have_rows('items_subblock_main_page') ) { the_row(); ?>
+                            <li><?php echo get_sub_field('name_items_subblock_main_page'); ?></li>
+                            <?php } ?>
                         </ul>
+						<?php } ?>
                     </div>
+					<?php } ?>
                 </div>
+				<?php } ?>
+				
+               <?php if( have_rows('room_equipment_c_single_rooms_page')){ ?>
                 <div class="list-column">
+					<?php while ( have_rows('room_equipment_c_single_rooms_page') ) { the_row(); ?>
                     <div>
                         <div class="list-img">
-                            <img src="/wp-content/themes/atlantik/images/krovati.svg"/>
+                            <img src="<?php echo get_sub_field('image_subblock_main_page'); ?>"/>
                         </div>
-                        <strong>Кровати:</strong>
+                        <strong><?php echo get_sub_field('title_subblock_main_page'); ?></strong>
+						
+						<?php if( have_rows('items_subblock_main_page')){ ?>
                         <ul class="list-group">
-                            <li>Двуспальная кровать</li>
-                            <li>Ортопедический матрас</li>
+							<?php while ( have_rows('items_subblock_main_page') ) { the_row(); ?>
+                            <li><?php echo get_sub_field('name_items_subblock_main_page'); ?></li>
+                            <?php } ?>
                         </ul>
+						<?php } ?>
                     </div>
-                    <div>
-                        <div class="list-img">
-                            <img src="/wp-content/themes/atlantik/images/mebel.svg"/>
-                        </div>
-                        <strong>Мебель:</strong>
-                        <ul class="list-group">
-                            <li>Гардеробная</li>
-                            <li>Зеркало</li>
-                            <li>Мягкая мебель</li>
-                            <li>Кресла</li>
-                            <li>Журнальный столик</li>
-                            <li>Тумбы</li>
-                        </ul>
-                    </div>
+					<?php } ?>
                 </div>
+				<?php } ?>
+				
+                <?php if( have_rows('room_equipment_d_single_rooms_page')){ ?>
                 <div class="list-column">
+					<?php while ( have_rows('room_equipment_d_single_rooms_page') ) { the_row(); ?>
                     <div>
                         <div class="list-img">
-                            <img src="/wp-content/themes/atlantik/images/territoriya.svg"/>
+                            <img src="<?php echo get_sub_field('image_subblock_main_page'); ?>"/>
                         </div>
-                        <strong>Внешняя территория и вид из окон:</strong>
+                        <strong><?php echo get_sub_field('title_subblock_main_page'); ?></strong>
+						
+						<?php if( have_rows('items_subblock_main_page')){ ?>
                         <ul class="list-group">
-                            <li>Балкон с красивым видом</li>
-                            <li>Вид на море</li>
+							<?php while ( have_rows('items_subblock_main_page') ) { the_row(); ?>
+                            <li><?php echo get_sub_field('name_items_subblock_main_page'); ?></li>
+                            <?php } ?>
                         </ul>
+						<?php } ?>
                     </div>
-                    <div>
-                        <div class="list-img">
-                            <img src="/wp-content/themes/atlantik/images/prochee.svg"/>
-                        </div>
-                        <strong>Прочее:</strong>
-                        <ul class="list-group">
-                            <li>Обслуживание номеров</li>
-                            <li>Набор посуды</li>
-                            <li>Отопление</li>
-                            <li>Сейф</li>
-                            <li>Чайный набор</li>
-                        </ul>
-                    </div>
+					<?php } ?>
                 </div>
+				<?php } ?>
             </div>
+			<?php } ?>
         </div>
 
+		<?php $relateds = get_field_object('room_related_single_rooms_page'); ?>
+		<?php if($relateds) { ?>
         <div class="related-block">
             <h3>Смотрите также</h3>
             <div class="related-grid">
+				<?php foreach ($relateds['value'] as $related) { ?>
+				<?php $image_url = wp_get_attachment_image_src(get_post_thumbnail_id($related->ID), 'full'); ?>
+				
                 <div class="item-carousel">
-                    <div class="image-carousel" style="background-image: url('/wp-content/themes/atlantik/images/room-1.jpg')"></div>
+                    <div class="image-carousel" style="background-image: url('<?php echo $image_url[0] ? $image_url[0] : esc_url( get_template_directory_uri() ) . '/images/room-1.jpg'; ?>')"></div>
                     <div class="text-carousel">
-                        <h3>НОМЕР «СТАНДАРТ»</h3>
-                        <p>от 2800 руб. за номер в сутки</p>
-                        <a href="#" class="btn">Подробнее</a>
+                        <h3><?php echo $related->post_title; ?></h3>
+                        <p><?php echo get_field('room_rate_single_rooms_page', $related->ID); ?></p>
+                        <a href="<?php echo get_permalink($related->ID) ?>" class="btn">Подробнее</a>
                     </div>
                 </div>
-                <div class="item-carousel">
-                    <div class="image-carousel" style="background-image: url('/wp-content/themes/atlantik/images/room-2.jpg')"></div>
-                    <div class="text-carousel">
-                        <h3>НОМЕР «семейный»</h3>
-                        <p>от 4200 руб. за номер в сутки</p>
-                        <a href="#" class="btn">Подробнее</a>
-                    </div>
-                </div>
-                <div class="item-carousel">
-                    <div class="image-carousel" style="background-image: url('/wp-content/themes/atlantik/images/room-3.jpg')"></div>
-                    <div class="text-carousel">
-                        <h3>НОМЕР «Студио-горы»</h3>
-                        <p>от 4800 руб. за номер в сутки</p>
-                        <a href="#" class="btn">Подробнее</a>
-                    </div>
-                </div>
-                <div class="item-carousel">
-                    <div class="image-carousel" style="background-image: url('/wp-content/themes/atlantik/images/room-4.jpg')"></div>
-                    <div class="text-carousel">
-                        <h3>НОМЕР «СТудио-море»</h3>
-                        <p>от 6200 руб. за номер в сутки</p>
-                        <a href="#" class="btn">Подробнее</a>
-                    </div>
-                </div>
+				<?php } ?>
             </div>
         </div>
+		<?php } ?>
     </div>
 
 <?php get_footer(); ?>
