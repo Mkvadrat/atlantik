@@ -531,3 +531,49 @@ function true_add_ajax_comment(){
 }
 add_action('wp_ajax_ajaxcomments', 'true_add_ajax_comment'); // wp_ajax_{значение параметра action}
 add_action('wp_ajax_nopriv_ajaxcomments', 'true_add_ajax_comment'); // wp_ajax_nopriv_{значение параметра action}
+
+/**********************************************************************************************************************************************************
+***********************************************************************************************************************************************************
+***********************************************************************СОЦИАЛЬНЫЕ СЕТИ ДЛЯ ПОСТОВ**********************************************************
+***********************************************************************************************************************************************************
+***********************************************************************************************************************************************************/
+function add_option_field_to_general_admin_page(){
+	$option_name = 'my_option';
+
+	// регистрируем опцию
+	register_setting( 'general', $option_name );
+
+	// добавляем поле
+	add_settings_field( 
+		'myprefix_setting-id', 
+		'Социальные сети', 
+		'myprefix_setting_callback_function', 
+		'general', 
+		'default', 
+		array( 
+			'id' => 'myprefix_setting-id', 
+			'option_name' => 'my_option' 
+		)
+	);
+}
+add_action('admin_menu', 'add_option_field_to_general_admin_page');
+
+function myprefix_setting_callback_function( $val ){
+	$id = $val['id'];
+	$option_name = $val['option_name'];
+	
+	wp_editor( html_entity_decode(get_option($option_name), ENT_QUOTES, 'UTF-8'), $id, array(
+		'wpautop'       => 1,
+		'media_buttons' => 1,
+		'textarea_name' => $option_name, //нужно указывать!
+		'textarea_rows' => 20,
+		'tabindex'      => null,
+		'editor_css'    => '',
+		'editor_class'  => '',
+		'teeny'         => 0,
+		'dfw'           => 0,
+		'tinymce'       => 1,
+		'quicktags'     => 1,
+		'drag_drop_upload' => false
+	) );
+}

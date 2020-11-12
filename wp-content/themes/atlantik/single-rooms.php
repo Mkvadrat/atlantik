@@ -141,7 +141,7 @@ get_header();
         </div>
 
 		<?php $relateds = get_field_object('room_related_single_rooms_page'); ?>
-		<?php if($relateds) { ?>
+		<?php if($relateds['value']) { ?>
         <div class="related-block">
             <h3>Смотрите также</h3>
             <div class="related-grid">

@@ -13,14 +13,14 @@ $(document).ready(function () {
         margin: 16,
         dots: true,
         nav: true,
-        navText: ["<img src='images/arrow-left.svg'>", "<img src='images/arrow-right.svg'>"]
+        navText: ["<img src='/wp-content/themes/atlantik/images/arrow-left.svg'>", "<img src='/wp-content/themes/atlantik/images/arrow-right.svg'>"]
     });
     $(".testimonials .owl-carousel").owlCarousel({
         items: 2,
         margin: 16,
         dots: false,
         nav: true,
-        navText: ["<img src='images/arrow-left.svg'>", "<img src='images/arrow-right.svg'>"]
+        navText: ["<img src='/wp-content/themes/atlantik/images/arrow-left.svg'>", "<img src='/wp-content/themes/atlantik/images/arrow-right.svg'>"]
     });
 
     // $('.fotorama').fotorama({

@@ -1,4 +1,13 @@
+@media screen and (max-width: 1350px) {
+    .menu-top li a {
+        font-size: 18px;
+        padding: 0 10px;
+    }
+}
 @media screen and (max-width: 1300px) {
+    .menu-top {
+        display: none;
+    }
     .btn-menu {
         display: flex;
         align-items: center;
@@ -14,7 +23,7 @@
         display: flex;
         width: 100%;
         height: 4px;
-        background: #FFFFFF;
+        background: #541E17;
     }
 
     .btn-menu span::before,
@@ -23,7 +32,7 @@
         display: block;
         width: 100%;
         height: 4px;
-        background: #FFFFFF;
+        background: #541E17;
         position: absolute;
         left: 0;
     }

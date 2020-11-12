@@ -1173,31 +1173,187 @@ footer {
     margin-bottom: 2px;
 }
 
-.service h1{
+.service h1 {
     margin-bottom: 15px;
 }
+
 .service h1 + p {
     text-align: center;
     font-size: 16px;
 }
 
+.service .big-card-image {
+    height: 306px;
+}
 
+.service .big-card {
+    margin-bottom: 30px;
+}
 
+.service .big-card-text h3 {
+    margin-bottom: 0;
+}
 
+.service .rooms-card .big-card-text {
+    padding: 0 64px;
+}
 
+.page-item .page-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    margin: 0;
+}
 
+.page-item:not(:first-child):not(:last-child) .page-link {
+    font-size: 16px;
+    width: 24px;
+    height: 24px;
+    background: transparent;
+    border-radius: 50%;
+    color: #000;
+    line-height: 13px;
+    text-align: center;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
 
+.page-item:not(:first-child):not(:last-child).active .page-link,
+.page-item:not(:first-child):not(:last-child) .page-link:hover {
+    background: #cec498;
+}
 
+.page-item:first-child,
+.page-item:last-child {
+    margin: 15px 40px;
+}
 
+.page-item:first-child .page-link,
+.page-item:last-child .page-link {
+    border-radius: 0;
+    padding: 0;
+}
 
+.page-item:first-child .page-link:hover,
+.page-item:last-child .page-link:hover {
+    background: transparent;
+}
 
+.page-item {
+    margin: 15px 0;
+}
 
+.pagination {
+    padding: 6px 0;
+    margin-bottom: 23px;
+}
 
+.page-item.disabled {
+    opacity: .4;
+}
 
+.page404 h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
 
+.page404 .small-banner {
+    height: 140px;
+}
 
+.page404 .content {
+    padding-top: 112px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.page404 .content .btn {
+    padding: 11px 80px;
+    margin-bottom: 93px;
+}
 
+.page404 .content img.big-logo {
+    width: 292px;
+}
 
+.page404 .content img:not(.big-logo) {
+    margin-bottom: 90px;
+}
+
+.content img[style*="float: left"],
+.content img[style*="float: right"] {
+    width: 50%;
+}
+
+.content img[style*="float: left"] {
+    margin: 0 16px 16px 0;
+}
+
+.content img[style*="float: right"] {
+    margin: 0 0 16px 16px;
+}
+
+.content.about p {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 24px;
+}
+
+.socials {
+    margin-bottom: 38px;
+    padding-top: 60px;
+}
+
+.socials a {
+    height: 35px;
+    display: inline-flex;
+}
+
+.socials a + a {
+    margin-left: 16px;
+}
+
+blockquote {
+    clear: both;
+    position: relative;
+    line-height: 22px;
+    margin: 117px 0 69px;
+    padding: 33px 80px 33px 120px;
+    background: #F6F6F6;
+}
+
+blockquote::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    right: 20px;
+    bottom: -20px;
+    border: 1px solid #D3CB95;
+}
+
+blockquote::before {
+    content: '';
+    width: 39px;
+    height: 39px;
+    display: block;
+    background: url('../images/qt.svg') no-repeat center;
+    background-size: cover;
+    position: absolute;
+    left: 53px;
+    bottom: -3px;
+}
 
 
